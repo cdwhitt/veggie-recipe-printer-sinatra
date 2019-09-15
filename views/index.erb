@@ -1,0 +1,26 @@
+<!--  YOUR CODE HERE -->
+<% require 'pry' %>
+
+<h1> <%= @name %></h1>
+<h3>Ingredients:</h3>
+<ul>
+  <% @ingredients.each do |ingredient| %>
+    <li><%= ingredient %></li>
+  <% end %>
+</ul>
+
+<h3>Directions:</h3>
+<ol>
+  <% @directions.each do |direction| %>
+    <li><%= direction %></li>
+  <% end %>
+</ol>
+
+
+
+<h3>Reviews:</h3>
+<ul>
+  <% @reviews.each do |review| %>
+    <li><%= "Username: #{review[:username]} | Rating: #{review[:rating]}/5 | Review: #{review[:review]}" %></li>
+  <% end %>
+</ul>
